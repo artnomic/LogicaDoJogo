@@ -57,27 +57,27 @@ public class Game extends JFrame {
 
         canva.addMouseListener(new MouseListener() {
             @Override
-            public void mouseClicked(MouseEvent mouseEvent) {
+            public void mouseClicked(MouseEvent e) {
+                mouseClick = e.getPoint();
+            }
+
+            @Override
+            public void mousePressed(MouseEvent e) {
 
             }
 
             @Override
-            public void mousePressed(MouseEvent mouseEvent) {
+            public void mouseReleased(MouseEvent e) {
 
             }
 
             @Override
-            public void mouseReleased(MouseEvent mouseEvent) {
+            public void mouseEntered(MouseEvent e) {
 
             }
 
             @Override
-            public void mouseEntered(MouseEvent mouseEvent) {
-
-            }
-
-            @Override
-            public void mouseExited(MouseEvent mouseEvent) {
+            public void mouseExited(MouseEvent e) {
 
             }
         });
@@ -112,6 +112,9 @@ public class Game extends JFrame {
         } else if (controllArrowKey[3]) {
             px++;
         }
+
+//        px = mouseClick.x;
+//        py = mouseClick.y;
     }
 
 //    private boolean colide(Element a, Element b) {
