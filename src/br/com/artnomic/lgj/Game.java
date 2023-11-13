@@ -6,6 +6,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Game extends JFrame {
+    //TODO: criar o readme e continuar o capitulo 2.
 
     private final int FPS = 1000 / 20;
 

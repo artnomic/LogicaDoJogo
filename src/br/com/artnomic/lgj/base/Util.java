@@ -1,6 +1,8 @@
 package br.com.artnomic.lgj.base;
 
 public class Util {
+    //TODO: corrigir os bugs dessa classe
+
     public static boolean collide(Element a, Element b) {
         if (!a.isActive() || !b.isActive())
             return false;
