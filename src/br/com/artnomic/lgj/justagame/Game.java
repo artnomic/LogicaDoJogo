@@ -1,4 +1,4 @@
-package br.com.artnomic.lgj;
+package br.com.artnomic.lgj.justagame;
 
 import javax.swing.*;
 import java.awt.*;
@@ -6,8 +6,6 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Game extends JFrame {
-    //TODO: criar o readme e continuar o capitulo 2.
-
     private final int FPS = 1000 / 20;
 
     class Element {
@@ -109,7 +107,7 @@ public class Game extends JFrame {
         setSize(640, 480);
         setVisible(true);
 
-        player.x = canva.getWidth() / 2 - player.width /2;
+        player.x = canva.getWidth() / 2 - player.width / 2;
         player.y = canva.getHeight() - player.height;
 
         shot.height = canva.getHeight() - player.height;
@@ -128,7 +126,7 @@ public class Game extends JFrame {
     }
 
     private void updateGame() {
-        if(gameOver) {
+        if (gameOver) {
             return;
         }
 
@@ -138,11 +136,11 @@ public class Game extends JFrame {
             player.x += player.velocity;
         }
 
-        if(player.x < 0) {
+        if (player.x < 0) {
             player.x = canva.getWidth() - player.width;
         }
 
-        if(player.x + player.width > canva.getWidth()) {
+        if (player.x + player.width > canva.getWidth()) {
             player.x = 0;
         }
 
@@ -155,13 +153,13 @@ public class Game extends JFrame {
                 break;
             }
 
-            if (collide (block, shot) && block.y > 0) {
+            if (collide(block, shot) && block.y > 0) {
                 block.y -= block.velocity * 2;
                 shot.y = block.y;
             } else {
                 int fate = r.nextInt(10);
 
-                if(fate == 0) {
+                if (fate == 0) {
                     block.y += block.velocity + 1;
                 } else if (fate == 5) {
                     block.y -= block.velocity;
