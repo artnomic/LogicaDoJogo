@@ -1,10 +1,13 @@
-package br.com.artnomic.lgj.spaceinvader;
+package br.com.artnomic.lgj.games.spaceinvader;
 
+import br.com.artnomic.lgj.base.Colors;
 import br.com.artnomic.lgj.base.Element;
 
 import java.awt.*;
 
 public class Shot extends Element {
+
+    Colors colors = new Colors();
     private boolean enemy;
 
     public Shot() {
@@ -25,8 +28,7 @@ public class Shot extends Element {
         if (!isActive())
             return;
 
-        g.setColor(enemy ? Color.RED : Color.WHITE);
-
+        g.setColor(enemy ? colors.getRedRose() : Color.WHITE);
         g.fillRect(getPx(), getPy(), getWidth(), getHeight());
     }
 }

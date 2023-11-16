@@ -1,4 +1,4 @@
-package br.com.artnomic.lgj.justagame;
+package br.com.artnomic.lgj.games.justagame;
 
 import javax.swing.*;
 import java.awt.*;

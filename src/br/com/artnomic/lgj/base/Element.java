@@ -7,6 +7,8 @@ public class Element {
     private boolean active;
     private Color color;
 
+    public Element() {}
+
     public Element(int px, int py, int width, int height) {
         this.px = px;
         this.py = py;
